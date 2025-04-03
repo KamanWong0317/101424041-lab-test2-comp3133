@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CharacterlistComponent } from './characterlist/characterlist.component';
 
 @Component({
   selector: 'app-root',

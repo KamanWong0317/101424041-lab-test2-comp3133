@@ -1,0 +1,15 @@
+<div class="character-container">
+<app-characterfilter (houseSelected)="getCharacterByHouse($event)"></app-characterfilter>
+</div>
+
+<div class="character-container">
+  <mat-card *ngFor="let character of filteredCharacters" class="character-card"
+  [routerLink]="['/characterdetails', character.id]"
+  style="cursor: pointer;">
+    <img mat-card-image [src]="character.image" alt="{{ character.name }}" />
+    <mat-card-content>
+      <h3>{{ character.name }}</h3>
+      <p>{{ character.house }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
